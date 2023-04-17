@@ -25,14 +25,14 @@
             {{ session('status') }}
         </div>
         @endif
-        <form action="{{ route('movies.update',$Movie->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('movies.update',$Movie) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')  
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>movie title:</strong>
-                        <input type="text" name="tile" value="{{ $Movie->title }}" class="form-control"
+                        <input type="text" name="title" value="{{ $Movie->title }}" class="form-control"
                             placeholder="movie title">
                     </div>
                 </div>

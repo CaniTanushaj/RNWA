@@ -60,22 +60,17 @@ class MovieController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Movie $movie): RedirectResponse
-
+    public function update(Request $request, Movie $movie)
     {
-
         $request->validate([
-
             'title' => 'required',
             'release_date' => 'required',
             'director' => 'required',
             'genre' => 'required',
-
         ]);
-
         $movie->update($request->all());
-        return "pusi kurac";
 
+        return redirect()->route('movies.index');
     }
 
     /**
