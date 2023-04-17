@@ -19,4 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('movies', MovieController::class);
+Route::get('/', function () {
+    return view('resources/views/Movie/index.blade.php');
+});
+
+
