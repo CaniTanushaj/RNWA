@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Cast;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 
@@ -79,7 +79,7 @@ class MovieController extends Controller
     public function destroy($id)
     {
         $movie=Movie::find($id)->delete();
-        return redirect()->route('movies.index')->with('success','Company has been deleted successfully');
+        return redirect()->route('movies.index')->with('success','Movie has been deleted successfully');
     
     }
 }

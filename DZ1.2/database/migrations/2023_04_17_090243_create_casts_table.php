@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('casts', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('movie_id');
-            $table->unsignedBigInteger('actor_id');
-            $table->string('cast_name');
+            $table->unsignedBigInteger('actors_id');
+            $table->string('caracter_name');
             $table->foreign('movie_id')
               ->references('id')->on('movies')->onDelete('cascade');
-            $table->foreign('actor_id')
+            $table->foreign('actors_id')
               ->references('id')->on('actors')->onDelete('cascade');
             $table->timestamps();
         });

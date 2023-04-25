@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Movie crud</title>
+    <title>Actors crud</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
     <link rel="stylesheet" href="{{asset('/css/main.css')}}">
 </head>
@@ -10,19 +10,20 @@
 <div class="navbar">
 		<div></div>
 		<ul>
-            <li><a href="{{ route('actors.index') }}">Actors</a></li>
+			<li><a href="{{ route('actors.index') }}">Actors</a></li>
 			<li><a href="{{ route('movies.index') }}">Movies</a></li>
-			<li><a href="{{ route('cast.index') }}">Cast</a></li>
+            <li><a href="{{ route('cast.index') }}">Cast</a></li>
+
 		</ul>
 	</div>
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Movie CRUD</h2>
+                    <h2>Actors CRUD</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{ route('movies.create') }}"> Create movie</a>
+                    <a class="btn btn-success" href="{{ route('actors.create') }}"> Create Actors</a>
                 </div>
             </div>
         </div>
@@ -35,28 +36,26 @@
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>movie title</th>
-                    <th>movie cast</th>
-                    <th>movie release date</th>
-                    <th>movie director</th>
-                    <th>movie genre</th>
+                    <th>Actors name</th>
+                    <th>Actors role</th>
+                    <th>Actors birth date</th>
+                    <th>Actors nationality</th>
                     <th width="280px">Action</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($Movie as $movie)
+                @foreach($actors as $Actors)
                     <tr>
-                        <td>{{ $movie->id }}</td>
-                        <td>{{ $movie->title }}</td>
-                        <td>@foreach($movie->cast as $cast)
-                        {{ $cast->caracter_name }},
+                        <td>{{ $Actors->id }}</td>
+                        <td>{{ $Actors->name }}</td>
+                        <td>@foreach($Actors->cast as $cast)
+                            {{$cast->caracter_name}}
                         @endforeach</td>
-                        <td>{{ $movie->release_date }}</td>
-                        <td>{{ $movie->director }}</td>
-                        <td>{{ $movie->genre }}</td>
+                        <td>{{ $Actors->birth_date }}</td>
+                        <td>{{ $Actors->nationality }}</td>
                         <td>
-                            <form action="{{ route('movies.destroy',$movie->id) }}" method="Post">
-                                <a class="btn btn-primary" href="{{ route('movies.edit',$movie->id) }}">Edit</a>
+                            <form action="{{ route('actors.destroy',$Actors->id) }}" method="Post">
+                                <a class="btn btn-primary" href="{{ route('actors.edit',$Actors->id) }}">Edit</a>
                                 @csrf
                                 @method('DELETE')  
                                 <button type="submit" class="btn btn-danger">Delete</button>

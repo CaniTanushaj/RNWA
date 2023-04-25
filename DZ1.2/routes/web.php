@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ActorsController;
+use App\Http\Controllers\CastController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('movies', MovieController::class);
+Route::resource('actors',ActorsController::class);
+Route::resource('cast',CastController::class);

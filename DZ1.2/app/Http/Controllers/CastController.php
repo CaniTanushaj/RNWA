@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\MovieController;
+use App\Models\Movie;
 use App\Models\Cast;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class CastController extends Controller
      */
     public function index()
     {
-        //
+        $cast = Cast::all();
+        return view('Cast.index',compact('cast'));
     }
 
     /**
@@ -20,7 +22,7 @@ class CastController extends Controller
      */
     public function create()
     {
-        //
+        return view('Cast.create');
     }
 
     /**
@@ -28,7 +30,16 @@ class CastController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'movie_id' => 'required',
+            'actors_id' => 'required',
+            'caracter_name' => 'required',
+        ]);
+        
+        Cast::create($request->post());
+
+        return redirect()->route('cast.index')->with('success','actor has been created successfully.');
+    
     }
 
     /**
@@ -36,7 +47,7 @@ class CastController extends Controller
      */
     public function show(Cast $cast)
     {
-        //
+        return view('Cast.edit',compact('cast'));
     }
 
     /**
@@ -44,7 +55,7 @@ class CastController extends Controller
      */
     public function edit(Cast $cast)
     {
-        //
+        return view('Cast.edit',compact('cast'));
     }
 
     /**
@@ -52,14 +63,23 @@ class CastController extends Controller
      */
     public function update(Request $request, Cast $cast)
     {
-        //
+        $request->validate([
+            'movie_id' => 'required',
+            'actors_id' => 'required',
+            'caracter_name' => 'required',
+        ]);
+        $actor->update($request->all());
+
+        return redirect()->route('cast.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Cast $cast)
+    public function destroy($id)
     {
-        //
+        $cast=Cast::find($id)->delete();
+        return redirect()->route('cast.index')->with('success','actor has been deleted successfully');
+    
     }
 }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Edit movie Form - Laravel 9 CRUD Tutorial</title>
+    <title>Edit cast Form - Laravel 9 CRUD Tutorial</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('/css/main.css')}}">
 </head>
@@ -12,19 +12,20 @@
 <div class="navbar">
 		<div></div>
 		<ul>
-            <li><a href="{{ route('actors.index') }}">Actors</a></li>
+            <li><a href="{{ route('cast.index') }}">cast</a></li>
 			<li><a href="{{ route('movies.index') }}">Movies</a></li>
-			<li><a href="{{ route('cast.index') }}">Cast</a></li>
+            <li><a href="{{ route('cast.index') }}">Cast</a></li>
+
 		</ul>
 	</div>
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Edit movie</h2>
+                    <h2>Edit cast</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('movies.index') }}" enctype="multipart/form-data">
+                    <a class="btn btn-primary" href="{{ route('cast.index') }}" enctype="multipart/form-data">
                         Back</a>
                 </div>
             </div>
@@ -34,36 +35,29 @@
             {{ session('status') }}
         </div>
         @endif
-        <form action="{{ route('movies.update',$Movie) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('cast.update',$cast) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')  
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>movie title:</strong>
-                        <input type="text" name="title" value="{{ $Movie->title }}" class="form-control"
-                            placeholder="movie title">
+                        <strong>cast title:</strong>
+                        <input type="text" name="name" value="{{ $cast->name }}" class="form-control"
+                            placeholder="cast name">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>movie release_date:</strong>
-                        <input type="date" name="release_date" class="form-control" placeholder="movie release_date"
-                            value="{{ $Movie->release_date }}">
+                        <strong>cast release_date:</strong>
+                        <input type="date" name="birth_date" class="form-control" placeholder="cast birth_date"
+                            value="{{ $cast->birth_date }}">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>movie director:</strong>
-                        <input type="text" name="director" value="{{ $Movie->director }}" class="form-control"
-                            placeholder="movie director">
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>movie genre:</strong>
-                        <input type="text" name="genre" value="{{ $Movie->genre }}" class="form-control"
-                            placeholder="genre">
+                        <strong>cast nationality:</strong>
+                        <input type="text" name="nationality" value="{{ $cast->nationality }}" class="form-control"
+                            placeholder="cast nationality">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary ml-3">Submit</button>
