@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::resource('movies', MovieController::class);
 Route::resource('actors',ActorsController::class);
 Route::resource('cast',CastController::class);
+

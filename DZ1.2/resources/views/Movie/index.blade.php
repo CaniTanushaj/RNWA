@@ -36,7 +36,6 @@
                 <tr>
                     <th>id</th>
                     <th>movie title</th>
-                    <th>movie cast</th>
                     <th>movie release date</th>
                     <th>movie director</th>
                     <th>movie genre</th>
@@ -48,9 +47,6 @@
                     <tr>
                         <td>{{ $movie->id }}</td>
                         <td>{{ $movie->title }}</td>
-                        <td>@foreach($movie->cast as $cast)
-                        {{ $cast->caracter_name }},
-                        @endforeach</td>
                         <td>{{ $movie->release_date }}</td>
                         <td>{{ $movie->director }}</td>
                         <td>{{ $movie->genre }}</td>
@@ -58,7 +54,8 @@
                             <form action="{{ route('movies.destroy',$movie->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('movies.edit',$movie->id) }}">Edit</a>
                                 @csrf
-                                @method('DELETE')  
+                                @method('DELETE')
+                                <a class="btn btn-info" href="{{ route('movies.show',$movie->id) }}">Show</a>
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
                         </td>
