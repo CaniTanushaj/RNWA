@@ -14,7 +14,7 @@
 <div class="navbar">
 		<div></div>
 		<ul>
-            <li><a href="{{ route('actors.index') }}">cast</a></li>
+            <li><a href="{{ route('actors.index') }}">Actors</a></li>
 			<li><a href="{{ route('movies.index') }}">Movies</a></li>
             <li><a href="{{ route('cast.index') }}">Cast</a></li>
 

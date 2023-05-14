@@ -35,8 +35,15 @@ class MovieController extends Controller
             'director' => 'required',
             'genre'=>'required',
         ]);
+
+        $movie=Movie::create($request->post());
+
+        Cast::create([
+            'movie_id'=>$movie->id,
+            'actors_id'=>$request['actors_id'],
+            'caracter_name'=>$request['caracter_name'],
+        ]);
         
-        Movie::create($request->post());
 
         return redirect()->route('movies.index')->with('success','Movie has been created successfully.');
     

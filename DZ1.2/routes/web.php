@@ -20,3 +20,6 @@ Route::resource('movies', MovieController::class);
 Route::resource('actors',ActorsController::class);
 Route::resource('cast',CastController::class);
 
+Route::get('/',function(){
+    return redirect('/movies');
+});

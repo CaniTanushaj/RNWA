@@ -61,10 +61,39 @@
                         <strong>movie genre:</strong>
                         <input type="text" name="genre" class="form-control" placeholder="movie genre">
                     </div>
+                    
+                    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
                 </div>
+                
+            <div class="container mt-2">
+            <div class="row">
+            <div class="col-lg-12 margin-tb">
+                <div class="pull-left mb-2">
+                    <h2>Add cast</h2>
+                </div>
+                
+                 </div>
+                 </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Actor</strong>
+                        <input type="number" name="actors_id" class="form-control" placeholder="actors_id">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Caracter Name</strong>
+                        <input type="text" name="caracter_name" class="form-control" placeholder="caracter_name">
+                    </div>
+                </div>
+                
                 <button type="submit" class="btn btn-primary ml-3">Submit</button>
             </div>
+            
         </form>
+        
     </div>
 </body>
 
