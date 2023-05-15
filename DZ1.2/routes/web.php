@@ -23,3 +23,6 @@ Route::resource('cast',CastController::class);
 Route::get('/',function(){
     return redirect('/movies');
 });
+
+Route::get('/movies.orderbyDate',[MovieController::class, 'orderbyDate']);
+Route::get('/actors.orderbyBirthDate',[ActorsController::class, 'orderbyBirthDate']);

@@ -24,6 +24,8 @@
                 </div>
                 <div class="pull-right mb-2">
                     <a class="btn btn-success" href="{{ route('actors.create') }}"> Create Actors</a>
+                    <a class="btn btn-success" href="{{ url('/actors.orderbyBirthDate') }}"> Sort by date</a>
+
                 </div>
             </div>
         </div>

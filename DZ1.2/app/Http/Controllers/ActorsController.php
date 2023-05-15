@@ -81,4 +81,12 @@ class ActorsController extends Controller
         return redirect()->route('actors.index')->with('success','actor has been deleted successfully');
     
     }
+
+    public function orderbyBirthDate()
+    {
+       
+        $actors = Actors::all()->sortBy('birth_date');
+
+        return view('Actors.index',compact('actors'));
+    }
 }

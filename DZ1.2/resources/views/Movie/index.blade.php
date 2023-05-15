@@ -23,6 +23,7 @@
                 </div>
                 <div class="pull-right mb-2">
                     <a class="btn btn-success" href="{{ route('movies.create') }}"> Create movie</a>
+                    <a class="btn btn-success" href="{{ url('/movies.orderbyDate') }}"> Sort by date</a>
                 </div>
             </div>
         </div>

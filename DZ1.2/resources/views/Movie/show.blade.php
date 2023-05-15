@@ -25,7 +25,7 @@
             <strong>Release Date:</strong> {{ $Movie->release_date }}<br>
             <strong>Genre:</strong> {{ $Movie->genre }}<br>
              <strong>@foreach($Movie->cast as $cast)
-                        Cast:</strong>{{ $cast->caracter_name }}
+                        Cast:</strong>{{$cast->actors->name}} as {{ $cast->caracter_name }},
                         @endforeach
         </p>
     </div>

@@ -92,4 +92,12 @@ class MovieController extends Controller
         return redirect()->route('movies.index')->with('success','Movie has been deleted successfully');
     
     }
+
+    public function orderbyDate()
+    {
+       
+        $Movie = Movie::all()->sortBy('release_date');
+
+        return view('Movie.index',compact('Movie'));
+    }
 }
