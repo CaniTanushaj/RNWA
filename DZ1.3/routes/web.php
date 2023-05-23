@@ -28,7 +28,12 @@ Route::get('/',function(){
 
 Route::get('/movies.orderbyDate',[MovieController::class, 'orderbyDate']);
 Route::get('/actors.orderbyBirthDate',[ActorsController::class, 'orderbyBirthDate']);
+Route::post('/movies.search', [MovieController::class, 'search'])->name('movie.search');
+Route::post('/actor.search', [ActorsController::class, 'search'])->name('actors.search');
 Route::get('/movies.fetch', [MovieController::class, 'fetch'])->name('movie.fetch');
 Route::get('/actors.fetch', [ActorsController::class, 'fetch'])->name('actors.fetch');
 
 
+
+
+Route::get('/live',[LiveSearchController::class, 'action']);

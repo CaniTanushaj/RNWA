@@ -5,7 +5,11 @@
     <title>Movie crud</title>
     <link rel="stylesheet" href="{{asset('/css/main.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="jquery-3.6.4.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+
+
 </head>
 <body>
 <div class="navbar">
@@ -37,10 +41,13 @@
 
             <div class="pull-left mb-2">
             <body>
-    
+            <form action="{{ route('movie.search') }}" method="Post">
+            @csrf
             <div classs="form-group" >
             <input type="text" id="search" name="search" placeholder="Search" class="form-control" />
         </div>
+        <button type="submit" class="btn btn-primary ml-3">Submit</button>
+</form>
     </div>
     
             
@@ -82,11 +89,6 @@
             </tbody>
         </table>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
-
-
     <script type="text/javascript">
         var path = "{{ route('movie.fetch') }}";
 

@@ -90,6 +90,11 @@ class ActorsController extends Controller
 
         return view('Actors.index',compact('actors'));
     }
+    public function search(Request $request)
+    {
+         $actors = Actors::where('name', 'like', '%'.$request->input('search').'%')->get();
+        return view('Actors.index',compact('actors'));
+    }
 
     public function fetch(Request $request)
     {

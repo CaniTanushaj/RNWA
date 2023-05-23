@@ -35,8 +35,13 @@
         @endif
 
         <div classs="form-group" >
+        <form action="{{ route('actors.search') }}" method="Post">
+            @csrf
+            <div classs="form-group" >
             <input type="text" id="search" name="search" placeholder="Search" class="form-control" />
         </div>
+        <button type="submit" class="btn btn-primary ml-3">Submit</button>
+</form>        </div>
 
 
         <table class="table table-bordered">

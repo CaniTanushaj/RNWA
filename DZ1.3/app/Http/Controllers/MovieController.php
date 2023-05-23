@@ -106,6 +106,12 @@ class MovieController extends Controller
         return view('Movie.index',compact('Movie'));
     }
 
+    public function search(Request $request)
+    {
+         $Movie = Movie::where('title', 'like', '%'.$request->input('search').'%')->get();
+        return view('Movie.index',compact('Movie'));
+    }
+
     public function fetch(Request $request)
     {
         $data = [];
