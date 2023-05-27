@@ -46,7 +46,7 @@
             <div classs="form-group" >
             <input type="text" id="search" name="search" placeholder="Search" class="form-control" />
         </div>
-        <button type="submit" class="btn btn-primary ml-3">Submit</button>
+        <button type="submit" class="btn btn-primary mt-2 ml-3">Submit</button>
 </form>
     </div>
     

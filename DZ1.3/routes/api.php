@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MovieController;
+use App\Http\Controllers\MovieApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +24,8 @@ Route::get('/', function () {
 });
 
 
+Route::get('movie', [MovieApiController::class, 'index']);
+Route::get('movie/{movie}', [MovieApiController::class, 'show']);
+Route::post('movie', [MovieApiController::class, 'store']);
+Route::put('movie/{movie}', [MovieApiController::class, 'update']);
+Route::delete('movie/{movie}', [MovieApiController::class, 'destroy']);

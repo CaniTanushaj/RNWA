@@ -6,7 +6,7 @@ use App\Models\Movie;
 use Illuminate\Http\Request;
 use DB;
 
-class MovieController extends Controller
+class MovieApiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class MovieController extends Controller
     public function index()
     {
         $Movie = Movie::all();
-        return view('Movie.index',compact('Movie'));
+        return $Movie;
     }
 
     /**
@@ -37,22 +37,9 @@ class MovieController extends Controller
             'genre'=>'required',
         ]);
         $movie=Movie::create($request->post());
-        if($request->inputs[0]["actors_id"]!=NULL){
-         foreach($request->inputs as $key=>$value){
-           
-            Cast::create([
-                'movie_id'=>$movie->id,
-                'actors_id'=>$value["actors_id"],
-                'caracter_name'=>$value["caracter_name"],
-            ]);
-
-        }}
-
-
         
 
-        return redirect()->route('movies.index')->with('success','Movie has been created successfully.');
-    
+        return "Film stvoren";    
     }
 
     /**
@@ -62,7 +49,7 @@ class MovieController extends Controller
     {
         
         $Movie = Movie::find($id);
-        return View('Movie.show',compact('Movie'));
+        return $Movie;
     }
 
     /**
@@ -86,7 +73,7 @@ class MovieController extends Controller
         ]);
         $movie->update($request->all());
 
-        return redirect()->route('movies.index');
+        return $movie;
     }
 
     /**
@@ -95,8 +82,7 @@ class MovieController extends Controller
     public function destroy($id)
     {
         $movie=Movie::find($id)->delete();
-        return redirect()->route('movies.index')->with('success','Movie has been deleted successfully');
-    
+        return "Movie deleted";    
     }
 
     public function orderbyDate()
@@ -104,30 +90,8 @@ class MovieController extends Controller
        
         $Movie = Movie::all()->sortBy('release_date');
 
-        return view('Movie.index',compact('Movie'));
+        return $Movie;
     }
 
-    public function search(Request $request)
-    {
-         $Movie = Movie::where('title', 'like', '%'.$request->input('search').'%')->get();
-        return view('Movie.index',compact('Movie'));
-    }
-
-    public function fetch(Request $request)
-    {
-        $data = [];
-            $data = Movie::select("title")
-
-                        ->where('title', 'LIKE', '%'. $request->get('query'). '%')
-
-                        ->get();
-        
-                        $final = array();
-                        foreach ($data as $dat)
-                            {
-                                $final[] = $dat->title;
-                            }
-
-        return response()->json($final);
-    }
+   
 }
