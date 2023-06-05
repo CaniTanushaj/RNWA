@@ -15,7 +15,40 @@
             <li><a href="{{ route('actors.index') }}">Actors</a></li>
 			<li><a href="{{ route('movies.index') }}">Movies</a></li>
 			<li><a href="{{ route('cast.index') }}">Cast</a></li>
-		</ul>
+            @if (Route::has('login'))
+      @auth
+      <li >
+      <a href="{{ route('login') }}">{{ Auth::user()->name }}</a>
+      </li>
+      @else
+      <li >
+      <a  href="{{ route('login') }}">Log in</a>
+      </li>
+      <li >
+      <a  href="{{ route('register') }}">Register</a>
+      </li>
+    @endauth
+    @auth
+    <li><form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+                @csrf
+                
+                <button class="m-0 p-1 btn btn-danger"  type="submit">Log out</button>
+            </form>
+    
+    
+
+            @if ($message = Session::get('success'))
+
+
+    @endauth
+
+
+@endif
+@endif
+        
+        
+        
+        </ul>
 	</div>
     <div class="container mt-2">
         <div class="row">
