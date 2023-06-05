@@ -37,3 +37,16 @@ Route::get('/actors.fetch', [ActorsController::class, 'fetch'])->name('actors.fe
 
 
 Route::get('/live',[LiveSearchController::class, 'action']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
