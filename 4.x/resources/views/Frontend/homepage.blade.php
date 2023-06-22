@@ -95,6 +95,10 @@
         @endforeach
         
 </div>
+
+
+
+
 <script type="text/javascript">
         var path = "{{ route('movie.fetch') }}";
 
@@ -123,3 +127,4 @@ $('#search').typeahead({
     </script>
 
 </body>
+</html>

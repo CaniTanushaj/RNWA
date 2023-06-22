@@ -15,9 +15,9 @@
 <div class="navbar w-100">
 		<div></div>
 		<ul>
-            <li><a href="{{ route('actors.index') }}">Actors</a></li>
-			<li><a href="{{ route('movies.index') }}">Movies</a></li>
-			<li><a href="{{ route('cast.index') }}">Cast</a></li>
+        <li><a href="{{ route('homepage') }}">Home</a></li>
+            <li><a href="{{ route('allMovies') }}">Movies</a></li>
+			<li><a href="{{ route('allSeries') }}">Series</a></li>
             @if (Route::has('login'))
       @auth
       <li >
@@ -71,6 +71,57 @@
 
 
 </div>
+
+
+
+<form action="{{ route('comment.store',$Movie->id) }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <div class="row m-3">
+                
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Write a comment:</strong>
+                        <input class="form-control input-lg" type="text" name="content" class="form-control" placeholder="">
+                        @auth
+                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                        @endif
+                        <input type="hidden" name="movie_id" value="{{$Movie->id}}">
+                        
+                    </div>  
+                </div>
+</div>
+
+            @if(Route::has('login'))
+            @auth
+                <button type="submit" class="btn btn-outline-dark m-3">Submit</button>
+           @endauth
+           @else
+           <a class="m-3"  href="{{ route('login') }}"> Log in to write a comment!</a>
+                @endif
+            
+        </form>
+    @foreach($Movie->comment as $comment)
+   <div class="row p-2 m-3 border border-2 rounded" > 
+    <div class="col-md-6">
+   <b>{{$comment->user->name}}:</b></br>
+   {{$comment->content}}
+   </div>
+   <div class="col-md-6 ">
+   @if (Route::has('login'))
+            @auth
+        @if($comment->user->id==Auth::user()->id ||$post->user->id==Auth::user()->id )
+   <form action="{{ route('comment.destroy',[$Movie->id,$comment->id]) }}" method="Post">
+            @csrf
+        @method('DELETE')  
+        <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-outline-dark btn-sm float-right">Delete</button>
+    </form>
+    @endauth
+                            @endif
+                             @endif
+   </div>
+   </div>
+    @endforeach
+    
 
 
 </body>

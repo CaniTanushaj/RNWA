@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\LiveSearchController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\CommentController;
+
 
 
 
@@ -76,6 +78,8 @@ Route::get('/homepage/{movie}',[MovieController::class, 'singleMovie'])->name('s
 Route::post('/homepage.searchMovie', [MovieController::class, 'searchMovie'])->name('homepage.searchMovie');
 Route::get('/homepage.allMovies', [MovieController::class, 'allMovies'])->name('allMovies');
 Route::get('/homepage.allSeries', [MovieController::class, 'allSeries'])->name('allSeries');
+Route::post('/homepage/{movie_id}/comment',[CommentController::class, 'store'])->name('comment.store');
+Route::delete('/homepage/{movie_id}/{comment}',[CommentController::class, 'destroy'])->name('comment.destroy');
 
 
 
