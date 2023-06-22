@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        $sql = file_get_contents(database_path('movies.sql'));
-        DB::unprepared($sql);
+      //  $sql = file_get_contents(database_path('movies.sql'));
+        //DB::unprepared($sql);
     }
 
     /**

@@ -94,9 +94,25 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>movie genre:</strong>
-                        <input type="text" name="genre" value="{{ $Movie->genre }}" class="form-control"
-                            placeholder="genre">
+                        <strong>movie image:</strong>
+                        <input type="file" name="image" value="{{ asset('storage/images/movies/'.$Movie->image) }}" class="form-control">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Series?:</strong>
+                        <input type="checkbox" name="is_series" value="true">
+                 </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>movie category:</strong>
+                        <label for="category"></label>
+<select name="category_id" id="pet-select">
+    <option value="">{{$Movie->category->name}}</option>
+    @foreach($category as $cat)
+    <option value="{{$cat->id}}">{{$cat->name}}</option>
+    @endforeach
+</select>                            
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary ml-3">Submit</button>

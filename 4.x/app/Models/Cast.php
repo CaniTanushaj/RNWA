@@ -10,7 +10,7 @@ class Cast extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['movie_id', 'actors_id','caracter_name'];
+    protected $fillable = ['movie_id', 'actors_id','caracter_name','image'];
     protected $primaryKey = 'id';
     public function actors()
     {

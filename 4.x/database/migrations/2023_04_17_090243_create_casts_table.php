@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('movie_id');
             $table->unsignedBigInteger('actors_id');
             $table->string('caracter_name');
+            $table->string('image')->nullable()->default('test');
             $table->foreign('movie_id')
               ->references('id')->on('movies')->onDelete('cascade');
             $table->foreign('actors_id')

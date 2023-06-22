@@ -56,11 +56,19 @@
         <h2>{{ $Movie->director }}</h2>
         <p>
             <strong>Release Date:</strong> {{ $Movie->release_date }}<br>
-            <strong>Genre:</strong> {{ $Movie->genre }}<br>
+            <strong>Genre:</strong> {{ $Movie->category->name }}<br>
              <strong>@foreach($Movie->cast as $cast)
                         Cast:</strong>{{$cast->actors->name}} as {{ $cast->caracter_name }},
                         @endforeach
         </p>
+        <p>
+        <strong>Image:</strong>
+</p>
+        @if($Movie->image!='test')
+                                    <img src="{{ asset('storage/images/movies/'.$Movie->image) }}" style="height: 266px;width:400px;">
+                                    @else 
+                                    <span>No image found!</span>
+                                    @endif
     </div>
 
 </div>

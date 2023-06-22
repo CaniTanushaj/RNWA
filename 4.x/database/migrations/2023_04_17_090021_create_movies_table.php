@@ -16,7 +16,11 @@ return new class extends Migration
             $table->string('title');
             $table->date('release_date');
             $table->string('director');
-            $table->string('genre');
+            $table->boolean('is_series')->default(false);
+            $table->unsignedBigInteger('category_id');
+            $table->string('image')->nullable()->default('test');
+            $table->foreign('category_id')
+              ->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

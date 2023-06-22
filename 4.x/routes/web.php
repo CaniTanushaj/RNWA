@@ -69,8 +69,18 @@ Route::group(['middleware' => 'auth','middleware' => 'is_admin'], function () {
 
 });
 
+
+//Frontend
+Route::get('/homepage',[MovieController::class, 'homepage'])->name('homepage');
+Route::get('/homepage/{movie}',[MovieController::class, 'singleMovie'])->name('singleMovie');
+Route::post('/homepage.searchMovie', [MovieController::class, 'searchMovie'])->name('homepage.searchMovie');
+Route::get('/homepage.allMovies', [MovieController::class, 'allMovies'])->name('allMovies');
+Route::get('/homepage.allSeries', [MovieController::class, 'allSeries'])->name('allSeries');
+
+
+
 Route::get('/',function(){
-    return redirect('/movies');
+    return redirect('/homepage');
 })->name('/');
 
 Route::get('/movies.orderbyDate',[MovieController::class, 'orderbyDate']);

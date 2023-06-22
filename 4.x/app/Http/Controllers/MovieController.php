@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use App\Models\Cast;
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Models\Category;
+
 use DB;
 
 class MovieController extends Controller
@@ -22,7 +25,8 @@ class MovieController extends Controller
      */
     public function create()
     {
-        return view('Movie.create');
+        $category = Category::all();
+        return view('Movie.create',compact('category'));
     }
 
     /**
@@ -30,13 +34,30 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
+        if($request->image){
+        $fileName = time() . '.' . $request->image->extension();
+        $request->image->storeAs('/public/images/movies', $fileName);
+        }
         $request->validate([
             'title' => 'required',
             'release_date' => 'required',
             'director' => 'required',
-            'genre'=>'required',
+            'category_id'=>'required',
         ]);
-        $movie=Movie::create($request->post());
+        
+        $movie=new Movie;
+        $movie->title = $request->input('title');
+        $movie->release_date = $request->input('release_date');
+        $movie->director = $request->input('director');
+        $movie->category_id = $request->input('category_id');
+        if($request->is_series){
+            $movie->is_series = 1;
+            }
+        if($request->image){
+        $movie->image = $fileName;
+        }
+        $movie->save();
+
         if($request->inputs[0]["actors_id"]!=NULL){
          foreach($request->inputs as $key=>$value){
            
@@ -70,7 +91,8 @@ class MovieController extends Controller
      */
     public function edit(Movie $Movie)
     {
-        return view('Movie.edit',compact('Movie'));
+        $category=Category::all();
+        return view('Movie.edit',compact('Movie','category'));
     }
 
     /**
@@ -78,13 +100,30 @@ class MovieController extends Controller
      */
     public function update(Request $request, Movie $movie)
     {
+        if($request->image){
+            Storage::delete('public/images/movies/' . $movie->image);
+        }
+        if($request->image){
+        $fileName = time() . '.' . $request->image->extension();
+        $request->image->storeAs('/public/images/movies', $fileName);
+        }
         $request->validate([
             'title' => 'required',
             'release_date' => 'required',
             'director' => 'required',
-            'genre' => 'required',
+            'category_id'=>'required',
         ]);
-        $movie->update($request->all());
+        $movie->title = $request->input('title');
+        $movie->release_date = $request->input('release_date');
+        $movie->director = $request->input('director');
+        $movie->category_id = $request->input('category_id');
+        if($request->is_series){
+            $movie->is_series = 1;
+            }
+        if($request->image){
+        $movie->image = $fileName;
+        }
+        $movie->save();
 
         return redirect()->route('movies.index');
     }
@@ -94,6 +133,11 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
+        
+        $kopija=Movie::find($id);
+        if($kopija->image){
+            Storage::delete('public/images/movies/' . $kopija->image);
+        }
         $movie=Movie::find($id)->delete();
         return redirect()->route('movies.index')->with('success','Movie has been deleted successfully');
     
@@ -130,4 +174,37 @@ class MovieController extends Controller
 
         return response()->json($final);
     }
+
+    public function homepage()
+    {
+        $Movie = Movie::all();
+        return view('Frontend.homepage',compact('Movie'));
+    }
+
+    public function allMovies()
+    {
+       
+        $Movie = Movie::all()->where('is_series',0);
+        return view('Frontend.homepage',compact('Movie'));
+    }
+    public function allSeries()
+    {
+        $Movie = Movie::all()->where('is_series',1);
+        return view('Frontend.homepage',compact('Movie'));
+    }
+
+    public function singleMovie($id)
+    {
+        $Movie = Movie::find($id);
+        return view('Frontend.singleMovie',compact('Movie'));
+    }
+
+    public function searchMovie(Request $request)
+    {
+         $Movie = Movie::where('title', 'like', '%'.$request->input('search').'%')->get();
+        return view('Frontend.homepage',compact('Movie'));
+    }
+
+
+
 }

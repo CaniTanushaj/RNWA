@@ -91,9 +91,31 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>movie genre:</strong>
-                        <input type="text" name="genre" class="form-control" placeholder="movie genre">
+                        <strong>movie image:</strong>
+                        <input type="file" name="image" class="form-control">
                     </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Series?:</strong>
+                        <input type="checkbox" name="is_series" value="true">
+                 </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>movie genre: 
+    
+    </strong></br>
+<label for="category"></label>
+<select name="category_id" id="pet-select">
+    <option value="">--Please choose an option--</option>
+    @foreach($category as $cat)
+    
+    <option value="{{$cat->id}}">{{$cat->name}}</option>
+    @endforeach
+</select>
+
+                </div>
+                    
                     
                     <hr style="height:2px;border-width:0;color:gray;background-color:gray">
                 </div>

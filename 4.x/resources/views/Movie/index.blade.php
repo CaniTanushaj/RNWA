@@ -107,7 +107,7 @@
                         @endforeach</td>
                         <td>{{ $movie->release_date }}</td>
                         <td>{{ $movie->director }}</td>
-                        <td>{{ $movie->genre }}</td>
+                        <td>{{ $movie->category->name }}</td>
                         <td>
                             <form action="{{ route('movies.destroy',$movie->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('movies.edit',$movie->id) }}">Edit</a>

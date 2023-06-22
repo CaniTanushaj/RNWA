@@ -9,7 +9,7 @@ use App\Models\Cast;
 class Actors extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'birth_date','nationality'];
+    protected $fillable = ['name', 'birth_date','nationality','image'];
     
     public function cast()
     {
