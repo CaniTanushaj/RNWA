@@ -4,15 +4,15 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="/home/hasan/Projects/Laravel/RNWA/createmovie.png" alt="project-screenshot" width="640" height="400/">
+<img src="createmovie.png" alt="project-screenshot" width="640" height="400/">
 
-<img src="/home/hasan/Projects/Laravel/RNWA/Screenshot from 2023-11-18 13-02-51.png" alt="project-screenshot" width="640" height="400/">
+<img src="Screenshot from 2023-11-18 13-02-51.png" alt="project-screenshot" width="640" height="400/">
 
-<img src="/home/hasan/Projects/Laravel/RNWA/Screenshot from 2023-11-18 13-03-29.png" alt="project-screenshot" width="640" height="400/">
+<img src="Screenshot from 2023-11-18 13-03-29.png" alt="project-screenshot" width="640" height="400/">
 
-<img src="/home/hasan/Projects/Laravel/RNWA/Screenshot from 2023-11-18 13-04-11.png" alt="project-screenshot" width="640" height="400/">
+<img src="Screenshot from 2023-11-18 13-04-11.png" alt="project-screenshot" width="640" height="400/">
 
-<img src="/home/hasan/Projects/Laravel/RNWA/Screenshot from 2023-11-18 13-12-23.png" alt="project-screenshot" width="640" height="400/">
+<img src="Screenshot from 2023-11-18 13-12-23.png" alt="project-screenshot" width="640" height="400/">
 
   
   
