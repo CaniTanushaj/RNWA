@@ -1,100 +1,88 @@
-insert into movies (id, title, release_date, director, genre) values (1, 'Attack of the Puppet People', '2022-09-14', 'Bronny Tellwright', 'Horror|Sci-Fi');
-insert into movies (id, title, release_date, director, genre) values (2, 'Quebrando o Tabu', '2023-02-08', 'Vi Folli', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (3, 'I Hate Christian Laettner', '2022-11-17', 'Arliene Dikle', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (4, 'Six Days', '2022-12-11', 'Adrian Clementet', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (5, 'Live!', '2022-08-24', 'Carlynne Bennallck', 'Comedy|Drama');
-insert into movies (id, title, release_date, director, genre) values (6, 'Patrik Age 1.5 (Patrik 1,5)', '2022-08-19', 'Dewey Hopewell', 'Comedy|Drama|Romance');
-insert into movies (id, title, release_date, director, genre) values (7, 'Fighting Seabees, The', '2022-06-22', 'Ariel Whellans', 'Action|Drama|War');
-insert into movies (id, title, release_date, director, genre) values (8, 'Disappeared, The', '2022-12-25', 'Phillie Gorling', 'Horror');
-insert into movies (id, title, release_date, director, genre) values (9, 'Went the Day Well?', '2023-01-12', 'Phineas Krier', 'Thriller|War');
-insert into movies (id, title, release_date, director, genre) values (10, 'Never Cry Wolf', '2022-05-14', 'Corabelle Moehle', 'Adventure|Drama');
-insert into movies (id, title, release_date, director, genre) values (11, 'Boat That Rocked, The (a.k.a. Pirate Radio)', '2023-02-06', 'Uriel Coppen', 'Comedy|Drama');
-insert into movies (id, title, release_date, director, genre) values (12, 'Rise of the Footsoldier', '2023-01-11', 'Angie Sheara', 'Action|Crime|Drama');
-insert into movies (id, title, release_date, director, genre) values (13, 'Brunet Will Call (Brunet wieczorowa pora)', '2022-05-08', 'Leone Poynor', 'Comedy');
-insert into movies (id, title, release_date, director, genre) values (14, 'Crime After Crime', '2022-12-05', 'Loralee Cornfoot', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (15, 'Ali: Fear Eats the Soul (Angst essen Seele auf)', '2022-09-21', 'Shell Sweynson', 'Drama|Romance');
-insert into movies (id, title, release_date, director, genre) values (16, 'Homage', '2022-10-26', 'Margot Bailles', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (17, 'Someone Like You (Unnaipol Oruvan)', '2023-04-01', 'Catina Yockney', 'Crime|Drama');
-insert into movies (id, title, release_date, director, genre) values (18, 'Heirloom, The (Zhai Ban)', '2022-05-26', 'Bianka Hynes', 'Drama|Horror');
-insert into movies (id, title, release_date, director, genre) values (19, 'Thoroughly Modern Millie', '2022-12-16', 'Gertrud Maycock', 'Comedy|Musical');
-insert into movies (id, title, release_date, director, genre) values (20, 'Dr. Cyclops', '2022-05-25', 'Meryl Massy', 'Adventure|Horror|Sci-Fi');
-insert into movies (id, title, release_date, director, genre) values (21, 'Palindromes', '2022-08-18', 'Henrieta Zanazzi', 'Adventure|Comedy|Drama');
-insert into movies (id, title, release_date, director, genre) values (22, 'Darjeeling Limited, The', '2022-10-08', 'Linette Silveston', 'Adventure|Comedy|Drama');
-insert into movies (id, title, release_date, director, genre) values (23, 'Shut Up & Sing', '2022-04-28', 'Clem Newiss', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (24, 'Night of the Living Dorks', '2022-08-10', 'Brittaney Demelt', 'Comedy|Horror');
-insert into movies (id, title, release_date, director, genre) values (25, 'First Position', '2022-12-09', 'Wilton Philpault', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (26, 'Hellion', '2022-06-06', 'Akim Nicolls', 'Drama|Thriller');
-insert into movies (id, title, release_date, director, genre) values (27, 'A Master Builder', '2023-04-13', 'Lucretia Kingsnoad', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (28, 'Where the Buffalo Roam', '2022-05-04', 'Ola Calder', 'Comedy');
-insert into movies (id, title, release_date, director, genre) values (29, 'Drowning Pool, The', '2022-07-13', 'Cara Tomei', 'Mystery|Thriller');
-insert into movies (id, title, release_date, director, genre) values (30, 'Wanda', '2022-07-11', 'Eben Newbatt', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (31, 'Deceiver', '2022-07-06', 'Manda Chasle', 'Crime|Drama|Thriller');
-insert into movies (id, title, release_date, director, genre) values (32, 'Bogowie', '2022-11-23', 'Sharona Seger', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (33, 'It', '2022-06-26', 'Becka Whiskerd', 'Comedy|Romance');
-insert into movies (id, title, release_date, director, genre) values (34, 'Spellbound', '2022-11-21', 'Vivianna Alexandre', 'Mystery|Romance|Thriller');
-insert into movies (id, title, release_date, director, genre) values (35, 'Latitudes', '2022-09-08', 'Dyann Todman', 'Drama|Romance');
-insert into movies (id, title, release_date, director, genre) values (36, 'Pete Seeger: The Power of Song', '2022-09-29', 'Gaelan Marrian', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (37, 'The Iron Commissioner', '2022-06-18', 'Cordula Brettel', '(no genres listed)');
-insert into movies (id, title, release_date, director, genre) values (38, 'Overnight', '2022-10-10', 'Lodovico Hawse', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (39, 'Platform (Zhantai)', '2022-10-28', 'Rudolph Godehard.sf', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (40, 'Earth Is a Sinful Song, The (Maa on syntinen laulu)', '2023-01-19', 'Jo Bamlett', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (41, 'Man of the House', '2022-06-15', 'Em Skentelbury', 'Action|Comedy');
-insert into movies (id, title, release_date, director, genre) values (42, 'Garfield''s Pet Force', '2022-06-23', 'Gage Grinnell', 'Animation');
-insert into movies (id, title, release_date, director, genre) values (43, 'A Year Along the Abandoned Road', '2022-06-07', 'Sheilakathryn Chase', '(no genres listed)');
-insert into movies (id, title, release_date, director, genre) values (44, 'Pine Flat', '2023-01-01', 'Rivalee Kremer', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (45, 'Tropico', '2022-06-08', 'Billye Derks', 'Drama|Fantasy|Romance');
-insert into movies (id, title, release_date, director, genre) values (46, 'Images', '2022-12-12', 'Sonja Macenzy', 'Drama|Fantasy|Horror');
-insert into movies (id, title, release_date, director, genre) values (47, 'Ecstasy (Éxtasis)', '2023-04-11', 'Avivah Verson', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (48, 'Dreamchild', '2023-01-13', 'Justin Mullard', 'Drama|Fantasy|Romance');
-insert into movies (id, title, release_date, director, genre) values (49, 'Eight Below', '2022-12-28', 'Cullan Troppmann', 'Action|Adventure|Drama|Romance');
-insert into movies (id, title, release_date, director, genre) values (50, 'Last Life in the Universe (Ruang rak noi nid mahasan)', '2022-06-06', 'Gerome Beatty', 'Drama|Romance');
-insert into movies (id, title, release_date, director, genre) values (51, 'Upstream', '2023-02-24', 'Aldric Palke', 'Comedy|Drama');
-insert into movies (id, title, release_date, director, genre) values (52, 'True Story', '2022-12-04', 'Griffin Keggins', 'Drama|Mystery|Thriller');
-insert into movies (id, title, release_date, director, genre) values (53, 'Punksters & Youngsters (Punk - Tauti joka ei tapa)', '2022-08-20', 'Winnie Jovicevic', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (54, 'New York Ripper, The (Squartatore di New York, Lo)', '2022-05-16', 'Mendie Hugnet', 'Crime|Horror|Mystery|Thriller');
-insert into movies (id, title, release_date, director, genre) values (55, 'Pool, The', '2022-12-29', 'Nobie Prue', 'Comedy|Drama');
-insert into movies (id, title, release_date, director, genre) values (56, 'Robin Hood: Men in Tights', '2022-05-02', 'Jaquelin Magee', 'Comedy');
-insert into movies (id, title, release_date, director, genre) values (57, 'Redhead from Wyoming, The', '2022-11-09', 'Augie Legat', 'Western');
-insert into movies (id, title, release_date, director, genre) values (58, 'Gun the Man Down', '2022-08-09', 'Anna-diane Howlett', 'Western');
-insert into movies (id, title, release_date, director, genre) values (59, 'Geronimo', '2023-01-03', 'Pietrek Mayoh', 'Action|Western');
-insert into movies (id, title, release_date, director, genre) values (60, 'Devil''s Rain, The', '2023-04-09', 'Hal Strutton', 'Horror');
-insert into movies (id, title, release_date, director, genre) values (61, 'Drew: The Man Behind the Poster', '2022-06-15', 'Stirling Attridge', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (62, 'Great Freedom No. 7 (Port of Freedom) (Große Freiheit Nr. 7)', '2022-05-22', 'Luelle Stooke', 'Drama|Musical|Romance');
-insert into movies (id, title, release_date, director, genre) values (63, 'Kill for Me', '2022-12-21', 'Maura Sexten', 'Drama|Thriller');
-insert into movies (id, title, release_date, director, genre) values (64, 'Malone', '2022-11-19', 'Calli Thornbarrow', 'Action|Drama|Thriller');
-insert into movies (id, title, release_date, director, genre) values (65, 'Megamind', '2023-03-10', 'Berny Coarser', 'Action|Animation|Children|Comedy|Sci-Fi|IMAX');
-insert into movies (id, title, release_date, director, genre) values (66, 'Crimewave', '2023-01-08', 'Carling Gilyatt', 'Comedy|Crime');
-insert into movies (id, title, release_date, director, genre) values (67, '2 Become 1 (Tin sun yut dui)', '2022-12-31', 'Marje Pieters', 'Comedy|Drama|Romance');
-insert into movies (id, title, release_date, director, genre) values (68, 'Doctors'' Wives', '2022-12-21', 'Sloan Lanegran', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (69, 'Grand Amour, Le', '2023-04-15', 'Suzanne Jeaffreson', 'Comedy|Romance');
-insert into movies (id, title, release_date, director, genre) values (70, 'Can''t Help Singing', '2023-03-14', 'Jory Terzo', 'Musical|Western');
-insert into movies (id, title, release_date, director, genre) values (71, 'Seven-Per-Cent Solution, The', '2022-10-28', 'Calli Balffye', 'Adventure|Comedy|Crime|Drama|Mystery|Thriller');
-insert into movies (id, title, release_date, director, genre) values (72, 'Shopworn Angel, The', '2022-08-06', 'Will Bowser', 'Drama|Romance|War');
-insert into movies (id, title, release_date, director, genre) values (73, 'Million Dollar Arm', '2022-11-11', 'Alidia de Leon', 'Comedy|Drama');
-insert into movies (id, title, release_date, director, genre) values (74, 'Chatroom', '2023-02-28', 'Coreen McAughtry', 'Crime|Drama|Mystery|Thriller');
-insert into movies (id, title, release_date, director, genre) values (75, 'Adjust Your Tracking', '2022-09-02', 'Loretta Pettifor', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (76, 'Riding Giants', '2022-07-01', 'Berti Dobbie', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (77, 'Last Life in the Universe (Ruang rak noi nid mahasan)', '2022-07-13', 'Ignacio Sharpus', 'Drama|Romance');
-insert into movies (id, title, release_date, director, genre) values (78, 'Steal This Movie!', '2022-09-29', 'Ram Snookes', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (79, 'Wrong Box, The', '2022-10-03', 'Yance Gandrich', 'Comedy');
-insert into movies (id, title, release_date, director, genre) values (80, 'London River', '2022-10-08', 'Sioux Rowson', 'Drama|Mystery');
-insert into movies (id, title, release_date, director, genre) values (81, 'Fifth Cord, The (Giornata nera per l''ariete)', '2022-07-07', 'Ring Varsey', 'Mystery|Thriller');
-insert into movies (id, title, release_date, director, genre) values (82, 'What Ever Happened to Baby Jane?', '2023-03-09', 'Kathlin Clancy', 'Drama|Horror|Thriller');
-insert into movies (id, title, release_date, director, genre) values (83, 'Doulos, Le', '2022-11-17', 'Colver McKelvie', 'Crime|Thriller');
-insert into movies (id, title, release_date, director, genre) values (84, 'Swamp Women', '2022-12-25', 'Findlay Eaton', 'Adventure|Crime|Horror');
-insert into movies (id, title, release_date, director, genre) values (85, 'Room for Romeo Brass, A', '2022-06-16', 'Carlynn Clardge', 'Comedy|Drama');
-insert into movies (id, title, release_date, director, genre) values (86, 'Tale of Cinema (Geuk jang jeon)', '2023-01-31', 'Hillary Drinkale', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (87, 'Boogeyman', '2022-07-18', 'Florian Clutterbuck', 'Drama|Horror|Mystery|Thriller');
-insert into movies (id, title, release_date, director, genre) values (88, 'Day They Robbed the Bank of England, The', '2022-08-16', 'Roderick Dedden', 'Crime|Drama');
-insert into movies (id, title, release_date, director, genre) values (89, 'Apartment, The', '2023-01-12', 'Stanislas Poytress', 'Comedy|Drama|Romance');
-insert into movies (id, title, release_date, director, genre) values (90, 'Below Sea Level', '2022-05-24', 'Vivianna Turbat', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (91, 'Four Feathers, The', '2022-09-09', 'Bald Clohessy', 'Adventure|War');
-insert into movies (id, title, release_date, director, genre) values (92, 'Carts of Darkness', '2022-05-10', 'Courtney Merrington', 'Documentary');
-insert into movies (id, title, release_date, director, genre) values (93, 'Misfortunates, The (De helaasheid der dingen)', '2022-06-10', 'Carmine Skinn', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (94, 'Young Poisoner''s Handbook, The', '2022-07-14', 'Korney Tortoise', 'Crime|Drama');
-insert into movies (id, title, release_date, director, genre) values (95, 'Amore (L''Amore)', '2022-08-11', 'Gabie Rook', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (96, 'Battle of Britain', '2022-09-10', 'Olin Scawton', 'War');
-insert into movies (id, title, release_date, director, genre) values (97, 'Story of Me, The (O contador de histórias)', '2022-08-02', 'Lennard O''Fihillie', 'Drama');
-insert into movies (id, title, release_date, director, genre) values (98, 'The Gamma People', '2022-09-04', 'Billie Hainey', 'Horror|Sci-Fi');
-insert into movies (id, title, release_date, director, genre) values (99, 'I Went Down', '2022-08-29', 'Kordula Oliphant', 'Comedy|Crime|Drama');
-insert into movies (id, title, release_date, director, genre) values (100, 'Branded', '2022-11-30', 'Brittne Baudacci', 'Action|Drama|Mystery|Sci-Fi');
+-- phpMyAdmin SQL Dump
+-- version 5.1.1deb5ubuntu1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Nov 18, 2023 at 01:28 PM
+-- Server version: 8.0.35-0ubuntu0.22.04.1
+-- PHP Version: 8.1.2-1ubuntu2.14
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `fsre_imdb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `movies`
+--
+
+CREATE TABLE `movies` (
+  `id` bigint UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `release_date` date NOT NULL,
+  `director` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `is_series` tinyint(1) NOT NULL DEFAULT '0',
+  `category_id` bigint UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'test',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `movies`
+--
+
+INSERT INTO `movies` (`id`, `title`, `release_date`, `director`, `is_series`, `category_id`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'Puss in boots', '2022-01-02', 'Joel Crawford', 0, 6, '1700308420.jpg', '2023-11-18 10:37:22', '2023-11-18 10:53:40'),
+(3, 'Godfather', '1972-12-04', 'Francis Ford Coppola', 0, 1, '1700307879.jpg', '2023-11-18 10:44:39', '2023-11-18 10:44:39'),
+(4, 'Dune', '2021-01-01', 'Denis Villeneuve', 0, 4, '1700308583.jpg', '2023-11-18 10:56:23', '2023-11-18 10:56:23'),
+(5, 'Scary Movie', '2000-11-11', 'test', 0, 3, '1700308720.jpg', '2023-11-18 10:58:40', '2023-11-18 10:58:40'),
+(6, 'American pie', '1999-11-11', 'test', 0, 8, '1700308836.jpg', '2023-11-18 11:00:36', '2023-11-18 11:00:36'),
+(7, 'Wolf of the Wall Street', '2013-03-01', 'Martin Scorcessi', 0, 1, '1700308946.jpg', '2023-11-18 11:02:26', '2023-11-18 11:02:26');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `movies`
+--
+ALTER TABLE `movies`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `movies_category_id_foreign` (`category_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `movies`
+--
+ALTER TABLE `movies`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `movies`
+--
+ALTER TABLE `movies`
+  ADD CONSTRAINT `movies_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -44,7 +44,7 @@ class MovieController extends Controller
             'director' => 'required',
             'category_id'=>'required',
         ]);
-        
+
         $movie=new Movie;
         $movie->title = $request->input('title');
         $movie->release_date = $request->input('release_date');
@@ -60,7 +60,7 @@ class MovieController extends Controller
 
         if($request->inputs[0]["actors_id"]!=NULL){
          foreach($request->inputs as $key=>$value){
-           
+
             Cast::create([
                 'movie_id'=>$movie->id,
                 'actors_id'=>$value["actors_id"],
@@ -70,10 +70,10 @@ class MovieController extends Controller
         }}
 
 
-        
+
 
         return redirect()->route('movies.index')->with('success','Movie has been created successfully.');
-    
+
     }
 
     /**
@@ -81,7 +81,7 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        
+
         $Movie = Movie::find($id);
         return View('Movie.show',compact('Movie'));
     }
@@ -124,7 +124,6 @@ class MovieController extends Controller
         $movie->image = $fileName;
         }
         $movie->save();
-
         return redirect()->route('movies.index');
     }
 
@@ -133,19 +132,19 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        
+
         $kopija=Movie::find($id);
         if($kopija->image){
             Storage::delete('public/images/movies/' . $kopija->image);
         }
         $movie=Movie::find($id)->delete();
         return redirect()->route('movies.index')->with('success','Movie has been deleted successfully');
-    
+
     }
 
     public function orderbyDate()
     {
-       
+
         $Movie = Movie::all()->sortBy('release_date');
 
         return view('Movie.index',compact('Movie'));
@@ -165,7 +164,7 @@ class MovieController extends Controller
                         ->where('title', 'LIKE', '%'. $request->get('query'). '%')
 
                         ->get();
-        
+
                         $final = array();
                         foreach ($data as $dat)
                             {
@@ -183,7 +182,7 @@ class MovieController extends Controller
 
     public function allMovies()
     {
-       
+
         $Movie = Movie::all()->where('is_series',0);
         return view('Frontend.homepage',compact('Movie'));
     }
